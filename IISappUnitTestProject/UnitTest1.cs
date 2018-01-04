@@ -35,7 +35,7 @@ namespace IISappUnitTestProject
             IEDriver.Navigate().GoToUrl("https://applicationjenkins.azurewebsites.net ");
             IEDriver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(15));
             IEDriver.Manage().Window.Maximize();
-            IWebElement verifyText = IEDriver.FindElement(By.CssSelector("body > div.container.body-content > div.jumbotron > p.lead"));
+            IWebElement verifyText = IEDriver.FindElement(By.XPath("//*[@class='lead']"));
             if(verifyText.GetAttribute("innerHTML").Trim().Equals("ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript. modify1"))
             {
                 Console.WriteLine("Text matched");
