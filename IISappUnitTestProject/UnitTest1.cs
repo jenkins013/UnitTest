@@ -38,7 +38,7 @@ namespace IISappUnitTestProject
             IWebElement verifyText = IEDriver.FindElement(By.XPath("//*[@class='lead']"));
             if(verifyText.GetAttribute("innerHTML").Trim().Equals("ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript. modify1"))
             {
-                Console.WriteLine("Text matched");
+                Console.WriteLine("Text matched successfully");
             }
             else
             {
